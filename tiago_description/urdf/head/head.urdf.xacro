@@ -33,6 +33,7 @@
   <xacro:include filename="$(find tiago_description)/urdf/sensors/xtion_pro_live.urdf.xacro" />
   <xacro:include filename="$(find tiago_description)/urdf/sensors/orbbec_astra.urdf.xacro" />
   <xacro:include filename="$(arg eye_hand_calibration_dir)/eye_hand_calibration.urdf.xacro" />
+  <xacro:include filename="$(find tiago_description)/urdf/sensors/mic_array.urdf.xacro" />
 
   <!-- MACRO DEFINITION-->
 
@@ -159,6 +160,10 @@
         </inertial>
       </link>
     </xacro:if>
+
+    <!-- Mic Array -->
+    <xacro:mic_array name="mic_array" parent="${name}_2_link" >
+    </xacro:mic_array>
 
   </xacro:macro>
 
